@@ -29,6 +29,8 @@ img_array = np.expand_dims(img_array, axis=0)
 
 # gRPC 채널 생성
 channel = grpc.insecure_channel(server_address,options=[('grpc.max_send_message_length', 50 * 1024 * 1024), ('grpc.max_recieve_message_length', 50 * 1024 * 1024)])
+# 만약 HTTPS 사용 시, 아래와 같이 설정합니다.
+#channel = grpc.secure_channel(server_address,grpc.ssl_channel_credentials(),options=[('grpc.max_send_message_length', 50 * 1024 * 1024), ('grpc.max_recieve_message_length', 50 * 1024 * 1024)])
 
 # gRPC 스텁 생성
 stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
