@@ -1,0 +1,1 @@
+Edge device (nvidia jetson, raspberry pi with coral TPU)에서 tfserving을 이용한 추론 성능을 시험합니다.
