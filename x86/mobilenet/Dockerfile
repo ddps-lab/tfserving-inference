@@ -1,8 +1,8 @@
 FROM tensorflow/serving
 
-COPY ../../model/mobilenet_v1 /models/mobilenet_v1/1/
+COPY mobilenet_v1 /models/mobilenet_v1/1/
 
-EXPOSE 8501
+EXPOSE 8500
 
-CMD ["--port=8500","--rest_api_port=8501","--model_name=mobilenet_v1","--model_base_path=/models/mobilenet_v1", "--grpc_channel_arguments=grpc.max_send_message_length=50*1024*1024", "--grpc_channel_arguments=grpc.max_receive_length=50*1024*1024", "--grpc_max_threads=1000"]
+CMD ["--port=8500","--model_name=mobilenet_v1","--model_base_path=/models/mobilenet_v1", "--grpc_channel_arguments=grpc.max_send_message_length=50*1024*1024", "--grpc_channel_arguments=grpc.max_receive_length=50*1024*1024", "--grpc_max_threads=1000"]
 
