@@ -1,0 +1,10 @@
+#for grpc request
+tensorflow-serving-api>=2.11.0
+
+#for image preprocessing (for mobilenet)
+numpy>=1.24.2
+Pillow>=9.4.0
+
+#for use google spread sheet
+gspread>=5.7.2
+oauth2client>=4.1.3
