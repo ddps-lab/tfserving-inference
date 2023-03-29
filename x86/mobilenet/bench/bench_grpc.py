@@ -2,6 +2,7 @@
 import sys
 sys.path.append('../../../bench')
 import grpc_module
+from tensorflow_serving.apis import predict_pb2
 #tf log setting
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
