@@ -57,16 +57,19 @@ all_inference_start_time = time.time()
 with concurrent.futures.ThreadPoolExecutor(max_workers=num_tasks) as executor:
     futures = [executor.submit(lambda: predict()) for _ in range(num_tasks)]
 
-inference_times_include_network = []
+inference_times_include_network_latency = np.array()
 # 결과 출력
 for future in concurrent.futures.as_completed(futures):
     result, thread_elapsed_time  = future.result()
     # results.append(result.outputs['dense_1'].float_val)
-    inference_times_include_network.append(thread_elapsed_time)
+    np.append(inference_times_include_network_latency, thread_elapsed_time)
     print("Thread execution time: ", thread_elapsed_time)
 
 all_inference_end_time = time.time()
 all_inference_elapsed_time = all_inference_end_time - all_inference_start_time
-print(inference_times_include_network)
-print(all_inference_elapsed_time)
+print(inference_times_include_network_latency)
+print("all_elapsed_time",all_inference_elapsed_time)
+print("maxtime:",np.max(inference_times_include_network_latency))
+print("mintime:",np.min(inference_times_include_network_latency))
+print("avgtime:",np.avg(inference_times_include_network_latency))
 
