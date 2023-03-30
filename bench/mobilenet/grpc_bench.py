@@ -1,7 +1,5 @@
 #import grpc module
-import sys
-sys.path.append("../module")
-import module_grpc
+from module import module_grpc
 from tensorflow_serving.apis import predict_pb2
 
 #tf log setting
@@ -11,7 +9,7 @@ import tensorflow as tf
 import numpy as np
 
 #preprocessing library
-import preprocessing
+from mobilenet import preprocessing
 
 #병렬처리 library
 import concurrent.futures

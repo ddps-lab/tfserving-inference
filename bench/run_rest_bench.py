@@ -1,7 +1,7 @@
 import variables
 from module import put_data_into_sheet
 import importlib
-importlib.import_module(f"{variables.model_name}.rest_bench")
+rest_bench = importlib.import_module(f".{variables.model_name}.rest_bench")
 
 result = rest_bench.run_bench(variables.num_tasks, variables.rest_server_address)
 

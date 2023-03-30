@@ -1,11 +1,9 @@
 #preprocessing library
-import preprocessing
+from mobilenet import preprocessing
 import numpy as np
 
 #REST 요청 관련 library
-import sys
-sys.path.append("../module")
-import module_rest
+from module import module_rest
 import json
 
 #병렬처리 library
