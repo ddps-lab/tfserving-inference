@@ -3,7 +3,9 @@ import preprocessing
 import numpy as np
 
 #REST 요청 관련 library
-from ..module import module_rest
+import sys
+sys.path.append("../")
+import module_rest
 import json
 
 #병렬처리 library

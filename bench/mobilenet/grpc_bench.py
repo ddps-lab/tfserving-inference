@@ -1,5 +1,7 @@
 #import grpc module
-from ..module import module_grpc
+import sys
+sys.path.append("../")
+import module_grpc
 from tensorflow_serving.apis import predict_pb2
 
 #tf log setting
