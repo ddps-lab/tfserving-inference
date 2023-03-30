@@ -28,7 +28,7 @@ usehttps = 1
 model_name = "mobilenet_v1"
 image_file_path = "../../../dataset/imagenet/imagenet_1000_raw/n01843383_1.JPEG"
 
-stub = grpc_module.create_grpc_stub(server_address, usehttps)
+stub = module_grpc.create_grpc_stub(server_address, usehttps)
 
 # 이미지 로드 및 전처리 (for mobilenet)
 img = Image.open(image_file_path)
