@@ -1,7 +1,7 @@
 #import grpc module
 import sys
 sys.path.append('../../../bench')
-import grpc_module
+import module_grpc
 from tensorflow_serving.apis import predict_pb2
 #tf log setting
 import os
@@ -15,7 +15,7 @@ import concurrent.futures
 #시간 측정 library
 import time
 #google sheet api 관련 library
-import gspread_module
+import module_gspread
 
 
 # 병렬 처리할 작업 횟수 지정
