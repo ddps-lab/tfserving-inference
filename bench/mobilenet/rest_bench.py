@@ -4,7 +4,7 @@ import numpy as np
 
 #REST 요청 관련 library
 import sys
-sys.path.append("../")
+sys.path.append("../module")
 import module_rest
 import json
 

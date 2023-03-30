@@ -1,6 +1,6 @@
 #import grpc module
 import sys
-sys.path.append("../")
+sys.path.append("../module")
 import module_grpc
 from tensorflow_serving.apis import predict_pb2
 
