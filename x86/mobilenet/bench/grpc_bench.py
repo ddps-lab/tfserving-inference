@@ -30,11 +30,11 @@ num_tasks = 30
 
 spreadsheet_id = variables.spreadsheet_id
 server_address = variables.grpc_server_address
-usehttps = variables.usehttps
+use_https = variables.use_https
 model_name = "mobilenet_v1"
 image_file_path = "../../../dataset/imagenet/imagenet_1000_raw/n01843383_1.JPEG"
 
-stub = module_grpc.create_grpc_stub(server_address, usehttps)
+stub = module_grpc.create_grpc_stub(server_address, use_https)
 
 # 이미지 로드 및 전처리 (for mobilenet)
 def img_preprocessing(image_file_path):
