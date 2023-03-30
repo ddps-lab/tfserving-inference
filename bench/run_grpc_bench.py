@@ -1,8 +1,8 @@
 import variables
 import sys
 sys.path.append(f"./{variables.model_name}")
-import grpc_bench
-import put_data_into_sheet
+from module import grpc_bench
+from module import put_data_into_sheet
 
 result = grpc_bench.run_bench(variables.num_tasks, variables.grpc_server_address, variables.use_https)
 
