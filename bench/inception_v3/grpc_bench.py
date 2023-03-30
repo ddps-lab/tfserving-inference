@@ -26,7 +26,7 @@ def run_bench(num_tasks, server_address, use_https):
     request = predict_pb2.PredictRequest()
     request.model_spec.name = model_name
     request.model_spec.signature_name = 'serving_default'
-    request.inputs['input'].CopyFrom(data)
+    request.inputs['input_3'].CopyFrom(data)
 
     # gRPC 요청 병렬 처리
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_tasks) as executor:
