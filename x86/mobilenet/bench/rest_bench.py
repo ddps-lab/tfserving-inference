@@ -16,14 +16,14 @@ import concurrent.futures
 import sys
 sys.path.append('../../../bench')
 import put_data_into_sheet
+import variables
 
 # 병렬 처리할 작업 횟수 지정
 num_tasks = 30
 
 # 저장할 google spread sheet id
-spreadsheet_id = ''
-# protocol을 포함한 URI 형태로 작성
-server_address = "http://localhost:8501/v1/models/"
+spreadsheet_id = variables.spreadsheet_id
+server_address = variables.rest_server_address
 model_name = "mobilenet_v1"
 image_file_path = "../../../dataset/imagenet/imagenet_1000_raw/n01843383_1.JPEG"
 

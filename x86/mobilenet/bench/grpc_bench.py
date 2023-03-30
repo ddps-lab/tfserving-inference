@@ -3,6 +3,7 @@ import sys
 sys.path.append('../../../bench')
 import module_grpc
 from tensorflow_serving.apis import predict_pb2
+import variables
 
 #tf log setting
 import os
@@ -26,12 +27,10 @@ import put_data_into_sheet
 # 병렬 처리할 작업 횟수 지정
 num_tasks = 30
 
-# 저장할 google spread sheet id
-spreadsheet_id = ''
-# 모델 서버의 주소 및 포트 번호, 모델 이름 설정
-server_address = ''
-#https 사용시 1로 설정, http 사용시 0으로 설정
-usehttps = 1
+
+spreadsheet_id = variables.spreadsheet_id
+server_address = variables.grpc_server_address
+usehttps = variables.usehttps
 model_name = "mobilenet_v1"
 image_file_path = "../../../dataset/imagenet/imagenet_1000_raw/n01843383_1.JPEG"
 
