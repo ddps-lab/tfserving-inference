@@ -1,7 +1,7 @@
 from datetime import datetime
 import numpy as np
 # google sheet api 관련 library
-import module_gspread
+from module import module_gspread
 
 def put_data(spreadsheet_id, array, num_tasks):
     now = datetime.now()
