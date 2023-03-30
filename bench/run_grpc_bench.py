@@ -1,6 +1,4 @@
 import variables
-import sys
-sys.path.append(f"./{variables.model_name}")
 from module import grpc_bench
 from module import put_data_into_sheet
 

@@ -1,8 +1,6 @@
 import variables
-import sys
-sys.path.append(f"/{variables.architecture}/{variables.model_name}/bench")
-import rest_bench
-import put_data_into_sheet
+from module import rest_bench
+from module import put_data_into_sheet
 
 result = rest_bench.run_bench(variables.num_tasks, variables.rest_server_address)
 
