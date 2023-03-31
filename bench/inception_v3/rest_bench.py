@@ -10,7 +10,6 @@ import json
 import concurrent.futures
 
 def run_bench(num_tasks, server_address):
-    # 저장할 google spread sheet id
     model_name = "inception_v3"
     image_file_path = "../../../dataset/imagenet/imagenet_1000_raw/n01843383_1.JPEG"
     

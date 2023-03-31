@@ -9,7 +9,7 @@ import tensorflow as tf
 import numpy as np
 
 #preprocessing library
-from mobilenet import preprocessing
+from mobilenet_v1 import preprocessing
 
 #병렬처리 library
 import concurrent.futures
