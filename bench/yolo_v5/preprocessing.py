@@ -8,7 +8,7 @@ import cv2
 def get_file_path(filename):
     return os.path.join(os.path.dirname(__file__), filename)
 
-# 이미지 로드 및 전처리 (for mobilenet)
+# 이미지 로드 및 전처리 (for yolo)
 def run_preprocessing(image_file_path):
     img = cv2.imread(get_file_path(image_file_path))
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)

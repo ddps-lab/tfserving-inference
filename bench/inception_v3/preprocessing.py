@@ -7,7 +7,7 @@ import os
 def get_file_path(filename):
     return os.path.join(os.path.dirname(__file__), filename)
 
-# 이미지 로드 및 전처리 (for mobilenet)
+# 이미지 로드 및 전처리 (for inception)
 def run_preprocessing(image_file_path):
     img = Image.open(get_file_path(image_file_path))
     img = img.resize((299, 299))
