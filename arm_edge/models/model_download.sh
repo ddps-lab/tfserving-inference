@@ -24,6 +24,6 @@ curl -O https://edge-inference.s3.us-west-2.amazonaws.com/NLP/bert_imdb.zip
 unzip -q bert_imdb.zip && rm bert_imdb.zip
 mkdir bert_imdb/1/ && mv bert_imdb/* bert_imdb/1/
 
-crul -O https://edge-inference.s3.us-west-2.amazonaws.com/NLP/distilbert_sst2.zip
+curl -O https://edge-inference.s3.us-west-2.amazonaws.com/NLP/distilbert_sst2.zip
 unzip -q distilbert_sst2.zip && rm distilbert_sst2.zip
 mkdir distilbert_sst2/1/ && mv distilbert_sst2/* distilbert_sst2/1/
