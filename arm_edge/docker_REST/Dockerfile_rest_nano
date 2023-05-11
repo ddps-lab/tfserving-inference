@@ -1,0 +1,5 @@
+FROM helmuthva/jetson-nano-tensorflow-serving-base 
+
+EXPOSE 8501
+
+CMD ["tensorflow_model_server", "--rest-port=8501","--model_config_file=/models/models.config", "--model_config_file_poll_wait_seconds=60", "--rest_api_num_threads=1000"]
