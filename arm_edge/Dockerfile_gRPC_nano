@@ -1,5 +1,0 @@
-FROM helmuthva/jetson-nano-tensorflow-serving-base 
-
-EXPOSE 8500
-
-CMD ["tensorflow_model_server", "--port=8500", "--model_config_file=/models/models.config", "--model_config_file_poll_wait_seconds=60", "--grpc_channel_arguments=grpc.max_send_message_length=100*1024*1024", "--grpc_channel_arguments=grpc.max_receive_length=100*1024*1024", "--grpc_max_threads=1000"]
