@@ -3,4 +3,4 @@ FROM helmuthva/jetson-xavier-tensorflow-serving-base
 EXPOSE 8500
 EXPOSE 8501
 
-CMD ["tensorflow_model_server", "--port=8500", "--rest-port=8501","--model_config_file=/models/models.config", "--model_config_file_poll_wait_seconds=60", "--rest_api_num_threads=1000", "--grpc_channel_arguments=grpc.max_send_message_length=100*1024*1024", "--grpc_channel_arguments=grpc.max_receive_length=100*1024*1024", "--grpc_max_threads=1000"]
+CMD ["tensorflow_model_server", "--port=8500", "--rest_api_port=8501","--model_config_file=/models/models.config", "--model_config_file_poll_wait_seconds=60", "--rest_api_num_threads=1000", "--grpc_channel_arguments=grpc.max_send_message_length=100*1024*1024", "--grpc_channel_arguments=grpc.max_receive_length=100*1024*1024", "--grpc_max_threads=1000"]
