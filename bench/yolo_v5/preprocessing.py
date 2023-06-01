@@ -1,7 +1,5 @@
 #image 전처리 library
-import tensorflow as tf
 import numpy as np
-from PIL import Image
 import os
 import cv2
 
