@@ -94,7 +94,6 @@ print(f'Model modules: {model_modules}')
 
 # 각 모델의 preprocessing 데이터 저장
 preprocessed_datas = preprocessing_data_manager.regist_preprocessed_datas(request_type)
-print(f'Preprocessed datas: {preprocessed_datas}')
 
 
 # 딕셔너리에 모델별로 엣지장비이름 등록 -> 들어오는 요청에 따라 어느 장비에 보낼 차례인지 확인 할 수 있는 딕셔너리 생성 
@@ -222,7 +221,7 @@ for cur_reqs_idx, cur_reqs in enumerate(requests_list):
         
         # thread_start_time = time.time()
         
-        executor.submit(model_request, edge_to_infer, req, cur_reqs_idx, cur_progress)
+        threads.append(executor.submit(model_request, edge_to_infer, req, cur_reqs_idx, cur_progress))
     
         cur_progress += 1
         print(f'progress: {cur_progress}/{total_req_num}', end='\r')
@@ -234,7 +233,8 @@ for cur_reqs_idx, cur_reqs in enumerate(requests_list):
 
 print(f'waiting to complete... (it takes about {cur_reqs_idx+1} seconds)')
 
-
+for th in concurrent.futures.as_completed(threads):
+    continue
 
 # cur_progress = 0
 # s = sched.scheduler()
